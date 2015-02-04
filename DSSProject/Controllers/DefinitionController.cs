@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace DSS.Views
 {
+    [Authorize]
     public class DefinitionController : Controller
     {
 		public DefinitionController()
