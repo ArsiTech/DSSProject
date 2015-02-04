@@ -14,6 +14,7 @@ namespace DSS.Views
 
 		}
         // GET: Definition
+        
         public ActionResult Index()
         {
 			System.Collections.ArrayList mineList = new System.Collections.ArrayList();
@@ -74,9 +75,18 @@ namespace DSS.Views
         }
 
 		//string method, int numCriteria, int numberOfAlternative, string[][] dgData, string[][] dgWeight
+        //Models.FuzzyTopsis ft
         [HttpPost]
-        public ActionResult Decision(Models.FuzzyTopsis ft)
+        public JsonResult Decision(Models.FuzzyTopsis ft)
 		{
+            //Models.FuzzyTopsis ft = new Models.FuzzyTopsis()
+            //{
+            //    dgData = dgData,
+            //    dgWeight = dgWeight,
+            //    numCriteria = numCriteria,
+            //    numberOfAlternative = numberOfAlternative,
+            //    method = method
+            //};
 			FuzzyTOPSIS FT = new FuzzyTOPSIS();
 			List<Element[]> wd = new List<Element[]>();
 			List<Element[][]> fdm = new List<Element[][]>();
